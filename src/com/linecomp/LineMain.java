@@ -18,16 +18,28 @@ public class LineMain {
 		p2 = scan.nextInt();
 		q2 = scan.nextInt();
 		
-		double length1 = Math.sqrt(((x2-x1)*(x2-x1))+((y2-y1)*(y2-y1)));
+		Double length1 = Math.sqrt(((x2-x1)*(x2-x1))+((y2-y1)*(y2-y1)));
 		System.out.println("The length of the line1 = "+length1);
 		
-		double length2 = Math.sqrt(((p2-p1)*(p2-p1))+((q2-q1)*(q2-q1)));
+		Double length2 = Math.sqrt(((p2-p1)*(p2-p1))+((q2-q1)*(q2-q1)));
 		System.out.println("The length of the line2 = "+length2);
 		
-		if(length1 == length2)
+		if(length1.equals(length2)) {
 			System.out.println("The lines are equal");
+		}
 		else
-			System.out.println("The lines are not equal");
+			System.out.println("Lines are not equal");
+		int comp = length1.compareTo(length2);
+		
+		if(comp > 0) {
+			System.out.println("line1 is greater than line2");
+		}
+		else if (comp < 0){
+			System.out.println("Line2 is greater than line1");
+		}
+		else{
+			System.out.println("Lines are equal");
+		}
 		scan.close();
 
 	}
