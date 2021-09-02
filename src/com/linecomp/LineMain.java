@@ -25,12 +25,17 @@ class Line {
 public class LineMain {
 
 	public void compareLine(Double dist1, Double dist2) {
-		if(Double.compare(dist1,dist2)==0)
-			System.out.println("The lines are equal");
-		else if(Double.compare(dist1,dist2)>0)
-			System.out.println("Line 1 is larger than line 2");
-		else
-			System.out.println("Line 2 is larger than line 1");
+		int comp = dist1.compareTo(dist2);
+
+		if(comp > 0) {
+			System.out.println("line1 is greater than line2");
+		}
+		else if (comp < 0){
+			System.out.println("Line2 is greater than line1");
+		}
+		else{
+			System.out.println("Lines are equal");
+		}
 	}
 
 	public static void main(String[] args) {
